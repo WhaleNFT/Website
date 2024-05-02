@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Whale NFT</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @font-face {
+            font-family: 'Ramona-Bold';
+            src: url('Ramona-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        h1, h2, h3, h4, h5, h6, p {
+            font-family: 'Ramona-Bold', sans-serif;
+        }
+
+        .hero-img {
+            margin-top: -100px; 
+        }
+
+        body {
+            color: white;
+            font-size: 70px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 100px;
+            background-image: url('bg.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+        }
+
+        .image {
+            width: 80%;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            margin-bottom: 150px; 
+            flex-direction: row; 
+            transition: opacity 1s; 
+        }
+
+        .image img {
+            max-width: 100%; 
+            height: auto; 
+            max-height: 400px;
+        }
+
+        .image p {
+            margin: 80px; 
+            text-align: left; 
+            color: white;
+            font-size: 18px; 
+            text-align: center;
+        }
+
+        h2 {
+            margin-left: -20px; 
+            margin-bottom: -60px;  
+            color: white; 
+            font-size: 36px; 
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            @font-face {
+                font-family: 'Ramona-Bold';
+                src: url('Ramona-Bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+            }
+            
+            h1, h2, h3, h4, h5, h6, p {
+                font-family: 'Ramona-Bold', sans-serif;
+            }
+
+            
+            
+            .image {
+                flex-direction: column; 
+                text-align: center; 
+            }
+
+         
+                body {
+                    font-size: 50px; 
+                    line-height: 1.5;
+                }
+
+                .container {
+                    padding: 10px; 
+                    overflow-x: hidden;
+                }
+
+                .image p {
+                    margin: 20px 0; 
+                    font-size: 20px; 
+                }
+
+                .image img {
+                    max-width: 100%; 
+                    height: auto;
+                
+            }
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 28px; 
+                text-align: center;
+            }
+
+            .button {
+                display: flex;
+                max-width: 300px;
+                margin-top: -20px; 
+            }
+        }
+
+        .button {
+            display: flex;
+            max-width: 300px;
+            margin-top: -20px; 
+        }
+
+        .button img {
+            max-width: 75%;
+            height: auto; 
+            cursor: pointer; 
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button img:hover {
+            transform: scale(1.1);
+        }
+
+        .channel-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .channel-link:hover {
+            color: lightblue;
+        }
+
+  
+        .language-buttons {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            z-index: 9999;
+        }
+
+        .language-buttons button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .language-buttons button:hover {
+            font-size: 20px;
+        }
+    
+    </style>
+    
+</head>
+<body>
+
+    <script>
+    
+        window.addEventListener("scroll", function() {
+            var enButton = document.getElementById("enButton");
+            var ruButton = document.getElementById("ruButton");
+            var opacityValue = window.scrollY > 0 ? 0.2 : 1; 
+            enButton.style.opacity = opacityValue;
+            ruButton.style.opacity = opacityValue;
+        });
+
+       
+        var enLink = "page2.html"; 
+        var ruLink = "index.html";
+    
+        var enButton = document.getElementById("enButton");
+        var ruButton = document.getElementById("ruButton");
+    
+        enButton.addEventListener("click", function() {
+            window.location.href = enLink; 
+        });
+    
+        ruButton.addEventListener("click", function() {
+            window.location.href = ruLink; 
+        });
+    </script>
+
+    <div class="language-buttons">
+        <button id="enButton">EN</button>
+        <button id="ruButton">RU</button>
+    </div>
+
+    <script>
+       
+        var enLink = "page2.html"; 
+        var ruLink = "index.html";
+    
+        var enButton = document.getElementById("enButton");
+        var ruButton = document.getElementById("ruButton");
+    
+       
+        enButton.addEventListener("click", function() {
+            window.location.href = enLink; 
+        });
+    
+        ruButton.addEventListener("click", function() {
+            window.location.href = ruLink; 
+        });
+    </script>
+
+    <div class="container">
+        <div class="image">
+            <h1>Whale NFT</h1>
+            <img class="hero-img" src="hero.png" alt="Whale NFT Logo" >
+        </div>
+
+
+        <div class="image">
+            <img src="1.png" alt="Image 1">
+            <div>
+                <h2>История создания </h2>
+                <p>
+                    1 апреля, день когда я решил создать свой проект на блокчейне TON, и в качестве своей визитки решил создать коллекцию Whale NFT — набор уникальных цифровых активов, посвященных величественным китам. Вдохновленный красотой и могуществом этих морских созданий, я начал работу над  коллекцией.
+                    
+                    Моя страсть к криптовалютам и искусству вдохновила меня на создание каждого уникального кита, отображающего все многообразие человеческого существования. Я вложил в каждое изображение частичку своей души, стремясь передать в них всю мощь и величие этих морских гигантов.
+                    
+                    Whale NFT не только проявлением моей любви к китам и искусству, но и уникальный способ поделиться этой страстью с другими. Каждый NFT стал своеобразным погружением в мир морских просторов и искусства, который можно ценить и коллекционировать.</p>
+            </div>
+            
+        </div>
+        <div class="image">
+            <img src="5.png" alt="Image 2">
+            <div>
+                <h2>Заработок</h2>
+                <p>Холдеры китов будут получать выплаты с распределения прибыли от проекта! В том числе они получат бесплатный доступ в тех продуктах, где я буду принимать участие в качестве разработчика!
+                Также у нас уже есть бот с призами! Скоро планируется листинг нашего токена, а значит холдеры получат к нему доступ первыми, по выгодной цене! Ну и конечно не забываем про наше комьюнити в Telegram-канале с раздачами)
+                    </p>
+            </div>
+           
+        </div>
+
+        <div class="image">
+            <img src="3D.gif" alt="Image 3">
+            <div>
+                <h2>Первая эксклюзивная NFT</h2>
+                <p>
+                    Первый эксклюзивный NFT был создан и продан 19 апреля, а после через 9 часов был перепродана за 20! В дальнейшем, между холдерами эксклюзивных и мистических NFT будут большие розыгрыши!</p>
+            </div>
+         
+        </div>
+
+        <div class="image">
+            <img src="2.png" alt="Image 4">
+            <div>
+                <h2>Основа </h2>
+                <p>
+                    Всего будет выпущено 444 NFT. Каждая NFT рисуется в ручную, цена флора повышается с количеством! После продажи всех 444 NFT проект не закроется, а будет развиваться уже в совсем других масштабах!
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="image">
+            <img src="BOX.gif" alt="Image 4">
+            <div>
+                <h2>Mystery Box</h2>
+                <p>
+                    Все просто, вы покупаете коробочку, ждете неделю, с нее вам могут выпасть киты разной редкости или крипта! Может выпасть до 10 TON или мифический кит! Это небольшая активность в которой нет вероятности проиграть!
+                </p>
+            </div>
+
+        </div>
+
+        <div class="image">
+            <img src="6.png" alt="Image 5">
+            <div>
+                <h2 id="section1">Спонсоры </h2>
+                <p>
+                    1. <a href="https://t.me/freedom_ton">FREEDOM TON</a>— сделали для нас пост на огромную аудиторию!       
+                    <br>2. <a href="https://t.me/AlexSl000">В ПОИСКЕ КРИПТЫ </a>— создатель этого канала упомянул нас в его видео)</br>
+                    Выражаем огромную благодарность им!</p>
+            </div>
+        </div>
+
+        <div class="image">
+            <div class="button">
+              
+                <a href="https://t.me/WhaleNFT_ton"><img src="7.png" alt="Button 3"></a>
+                <a href="https://getgems.io/collection/EQDBUEyRFEiiopEzqN3LjXCnIKyZ0-VcJvIeuADCAIrsuWqu"><img src="8.png" alt="Button 4"></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
